@@ -5,7 +5,7 @@ import axios from "axios";
 import { useCallback, useState } from "react";
 import { useRouter } from "next/navigation";
 
-import { SafeListing,  SafeUser } from "@/app/types";
+import { SafeListing, SafeUser } from "@/app/types";
 
 import Heading from "@/app/components/Heading";
 import Container from "@/app/components/Container";
@@ -39,7 +39,8 @@ const PropertiesClient: React.FC<PropertiesClientProps> = ({
     })
   }, [router]);
 
-  return (
+
+  return ( 
     <Container>
       <Heading
         title="Properties"
@@ -65,7 +66,7 @@ const PropertiesClient: React.FC<PropertiesClientProps> = ({
             actionId={listing.id}
             onAction={onDelete}
             disabled={deletingId === listing.id}
-            actionLabel="Cancel property"
+            actionLabel="Delete property"
             currentUser={currentUser}
           />
         ))}

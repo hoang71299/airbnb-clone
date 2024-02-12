@@ -7,7 +7,7 @@ interface IParams {
   listingId?: string;
 }
 
-export async function GET(
+export async function DELETE(
   request: Request, 
   { params }: { params: IParams }
 ){
@@ -29,4 +29,5 @@ export async function GET(
       userId: currentUser.id
     }
   })
+  return NextResponse.json(listing); 
 }
